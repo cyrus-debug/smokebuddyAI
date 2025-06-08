@@ -1,29 +1,32 @@
 {
   "expo": {
-    "name": "smokebuddy",
-    "slug": "smokebuddy",
+    "name": "Highdeas AI",
+    "slug": "highdeas-ai",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
-    "newArchEnabled": true,
-    "splash": {
-      "image": "./assets/splash-icon.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.highdeasai.app",
+      "infoPlist": {
+        "NSMicrophoneUsageDescription": "We need access to your microphone for voice input",
+        "NSSpeechRecognitionUsageDescription": "We need speech recognition to convert your voice to text"
+      }
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#4CAF50"
       },
-      "edgeToEdgeEnabled": true
+      "permissions": [
+        "android.permission.RECORD_AUDIO"
+      ],
+      "package": "com.highdeasai.app"
     },
-    "web": {
-      "favicon": "./assets/favicon.png"
-    }
+    "plugins": [
+      "@react-native-voice/voice"
+    ]
   }
 }
