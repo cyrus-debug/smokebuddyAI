@@ -100,7 +100,10 @@ export const ChatScreen = () => {
       <ScrollView
         ref={scrollViewRef}
         style={styles.messagesContainer}
-        onContentSizeChange={() => scrollViewRef.current?.scrollToEnd()}
+        contentContainerStyle={styles.messagesContentContainer}
+        showsVerticalScrollIndicator={true}
+        onContentSizeChange={() => scrollViewRef.current?.scrollToEnd({ animated: true })}
+        onLayout={() => scrollViewRef.current?.scrollToEnd({ animated: true })}
       >
         {messages.map(message => (
           <Surface
@@ -177,6 +180,9 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 16,
   },
+  messagesContentContainer: {
+    paddingBottom: 16,
+  },
   messageBubble: {
     padding: 12,
     borderRadius: 20,
@@ -193,6 +199,7 @@ const styles = StyleSheet.create({
   },
   messageText: {
     fontSize: 16,
+    marginRight: 24,
   },
   inputContainer: {
     flexDirection: 'row',

@@ -1,5 +1,5 @@
-// Use your computer's local IP address here
-const API_URL = 'http://192.168.1.231:3000';
+// Use localhost for development
+const API_URL = 'http://localhost:3000';
 
 export const generateAIResponse = async (userMessage: string): Promise<string> => {
   try {
