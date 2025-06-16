@@ -1,10 +1,16 @@
 {
   "expo": {
-    "name": "Highdeas AI",
-    "slug": "highdeas-ai",
+    "name": "HighdeasAI",
+    "slug": "highdeasai",
     "version": "1.0.0",
     "orientation": "portrait",
+    "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
     "assetBundlePatterns": [
       "**/*"
     ],
@@ -18,15 +24,20 @@
     },
     "android": {
       "adaptiveIcon": {
-        "backgroundColor": "#4CAF50"
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
       },
       "permissions": [
         "android.permission.RECORD_AUDIO"
       ],
       "package": "com.highdeasai.app"
     },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
     "plugins": [
-      "@react-native-voice/voice"
+      "expo-linear-gradient",
+      "expo-blur"
     ]
   }
 }

@@ -273,11 +273,15 @@ PODS:
     - Yoga
   - ExpoAsset (11.1.5):
     - ExpoModulesCore
+  - ExpoBlur (12.4.1):
+    - ExpoModulesCore
   - ExpoFileSystem (18.1.10):
     - ExpoModulesCore
   - ExpoFont (13.3.1):
     - ExpoModulesCore
   - ExpoKeepAwake (14.1.4):
+    - ExpoModulesCore
+  - ExpoLinearGradient (12.3.0):
     - ExpoModulesCore
   - ExpoModulesCore (2.4.0):
     - DoubleConversion
@@ -315,6 +319,32 @@ PODS:
   - hermes-engine (0.79.3):
     - hermes-engine/Pre-built (= 0.79.3)
   - hermes-engine/Pre-built (0.79.3)
+  - lottie-ios (4.5.0)
+  - lottie-react-native (7.2.2):
+    - DoubleConversion
+    - glog
+    - hermes-engine
+    - lottie-ios (= 4.5.0)
+    - RCT-Folly (= 2024.11.18.00)
+    - RCTRequired
+    - RCTTypeSafety
+    - React-Core
+    - React-debug
+    - React-Fabric
+    - React-featureflags
+    - React-graphics
+    - React-hermes
+    - React-ImageManager
+    - React-jsi
+    - React-NativeModulesApple
+    - React-RCTFabric
+    - React-renderercss
+    - React-rendererdebug
+    - React-utils
+    - ReactCodegen
+    - ReactCommon/turbomodule/bridging
+    - ReactCommon/turbomodule/core
+    - Yoga
   - RCT-Folly (2024.11.18.00):
     - boost
     - DoubleConversion
@@ -1714,7 +1744,7 @@ PODS:
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
     - Yoga
-  - react-native-voice (3.2.4):
+  - react-native-voice (3.1.5):
     - React-Core
   - React-NativeModulesApple (0.79.3):
     - glog
@@ -2113,6 +2143,55 @@ PODS:
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
     - Yoga
+  - RNSVG (15.12.0):
+    - DoubleConversion
+    - glog
+    - hermes-engine
+    - RCT-Folly (= 2024.11.18.00)
+    - RCTRequired
+    - RCTTypeSafety
+    - React-Core
+    - React-debug
+    - React-Fabric
+    - React-featureflags
+    - React-graphics
+    - React-hermes
+    - React-ImageManager
+    - React-jsi
+    - React-NativeModulesApple
+    - React-RCTFabric
+    - React-renderercss
+    - React-rendererdebug
+    - React-utils
+    - ReactCodegen
+    - ReactCommon/turbomodule/bridging
+    - ReactCommon/turbomodule/core
+    - RNSVG/common (= 15.12.0)
+    - Yoga
+  - RNSVG/common (15.12.0):
+    - DoubleConversion
+    - glog
+    - hermes-engine
+    - RCT-Folly (= 2024.11.18.00)
+    - RCTRequired
+    - RCTTypeSafety
+    - React-Core
+    - React-debug
+    - React-Fabric
+    - React-featureflags
+    - React-graphics
+    - React-hermes
+    - React-ImageManager
+    - React-jsi
+    - React-NativeModulesApple
+    - React-RCTFabric
+    - React-renderercss
+    - React-rendererdebug
+    - React-utils
+    - ReactCodegen
+    - ReactCommon/turbomodule/bridging
+    - ReactCommon/turbomodule/core
+    - Yoga
   - RNVectorIcons (10.2.0):
     - DoubleConversion
     - glog
@@ -2153,9 +2232,11 @@ DEPENDENCIES:
   - expo-dev-menu (from `../node_modules/expo-dev-menu`)
   - expo-dev-menu-interface (from `../node_modules/expo-dev-menu-interface/ios`)
   - ExpoAsset (from `../node_modules/expo-asset/ios`)
+  - ExpoBlur (from `../node_modules/expo-blur/ios`)
   - ExpoFileSystem (from `../node_modules/expo-file-system/ios`)
   - ExpoFont (from `../node_modules/expo-font/ios`)
   - ExpoKeepAwake (from `../node_modules/expo-keep-awake/ios`)
+  - ExpoLinearGradient (from `../node_modules/expo-linear-gradient/ios`)
   - ExpoModulesCore (from `../node_modules/expo-modules-core`)
   - ExpoSpeech (from `../node_modules/expo-speech/ios`)
   - EXUpdatesInterface (from `../node_modules/expo-updates-interface/ios`)
@@ -2164,6 +2245,7 @@ DEPENDENCIES:
   - fmt (from `../node_modules/react-native/third-party-podspecs/fmt.podspec`)
   - glog (from `../node_modules/react-native/third-party-podspecs/glog.podspec`)
   - hermes-engine (from `../node_modules/react-native/sdks/hermes-engine/hermes-engine.podspec`)
+  - lottie-react-native (from `../node_modules/lottie-react-native`)
   - RCT-Folly (from `../node_modules/react-native/third-party-podspecs/RCT-Folly.podspec`)
   - RCT-Folly/Fabric (from `../node_modules/react-native/third-party-podspecs/RCT-Folly.podspec`)
   - RCTDeprecation (from `../node_modules/react-native/ReactApple/Libraries/RCTFoundation/RCTDeprecation`)
@@ -2232,11 +2314,13 @@ DEPENDENCIES:
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
   - "RNCAsyncStorage (from `../node_modules/@react-native-async-storage/async-storage`)"
   - RNScreens (from `../node_modules/react-native-screens`)
+  - RNSVG (from `../node_modules/react-native-svg`)
   - RNVectorIcons (from `../node_modules/react-native-vector-icons`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
   trunk:
+    - lottie-ios
     - SocketRocket
 
 EXTERNAL SOURCES:
@@ -2264,12 +2348,16 @@ EXTERNAL SOURCES:
     :path: "../node_modules/expo-dev-menu-interface/ios"
   ExpoAsset:
     :path: "../node_modules/expo-asset/ios"
+  ExpoBlur:
+    :path: "../node_modules/expo-blur/ios"
   ExpoFileSystem:
     :path: "../node_modules/expo-file-system/ios"
   ExpoFont:
     :path: "../node_modules/expo-font/ios"
   ExpoKeepAwake:
     :path: "../node_modules/expo-keep-awake/ios"
+  ExpoLinearGradient:
+    :path: "../node_modules/expo-linear-gradient/ios"
   ExpoModulesCore:
     :path: "../node_modules/expo-modules-core"
   ExpoSpeech:
@@ -2287,6 +2375,8 @@ EXTERNAL SOURCES:
   hermes-engine:
     :podspec: "../node_modules/react-native/sdks/hermes-engine/hermes-engine.podspec"
     :tag: hermes-2025-06-04-RNv0.79.3-7f9a871eefeb2c3852365ee80f0b6733ec12ac3b
+  lottie-react-native:
+    :path: "../node_modules/lottie-react-native"
   RCT-Folly:
     :podspec: "../node_modules/react-native/third-party-podspecs/RCT-Folly.podspec"
   RCTDeprecation:
@@ -2419,6 +2509,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/@react-native-async-storage/async-storage"
   RNScreens:
     :path: "../node_modules/react-native-screens"
+  RNSVG:
+    :path: "../node_modules/react-native-svg"
   RNVectorIcons:
     :path: "../node_modules/react-native-vector-icons"
   Yoga:
@@ -2437,9 +2529,11 @@ SPEC CHECKSUMS:
   expo-dev-menu: e0a52332a0daa07b22ea61f9d8ff0b25bc7e3971
   expo-dev-menu-interface: 609c35ae8b97479cdd4c9e23c8cf6adc44beea0e
   ExpoAsset: 3bc9adb7dbbf27ae82c18ca97eb988a3ae7e73b1
+  ExpoBlur: 98f8c3ead7693fa429e9e036957ee3527abedd5b
   ExpoFileSystem: c36eb8155eb2381c83dda7dc210e3eec332368b6
   ExpoFont: abbb91a911eb961652c2b0a22eef801860425ed6
   ExpoKeepAwake: bf0811570c8da182bfb879169437d4de298376e7
+  ExpoLinearGradient: 1db30c60fe141f185b0ca5556cc85deb3ee9f245
   ExpoModulesCore: d431ffe83c8673d02cb38425594a5f5480fd3061
   ExpoSpeech: 9b3bdf552e69c8015c246dc52b5ad5fcdbec878e
   EXUpdatesInterface: 7ff005b7af94ee63fa452ea7bb95d7a8ff40277a
@@ -2448,6 +2542,8 @@ SPEC CHECKSUMS:
   fmt: a40bb5bd0294ea969aaaba240a927bd33d878cdd
   glog: 5683914934d5b6e4240e497e0f4a3b42d1854183
   hermes-engine: 94ed01537bdeccaab1adbf94b040d115d6fa1a7f
+  lottie-ios: a881093fab623c467d3bce374367755c272bdd59
+  lottie-react-native: 8bc11e10576d1a3f77f4e0ae5b70503c5c890a09
   RCT-Folly: e78785aa9ba2ed998ea4151e314036f6c49e6d82
   RCTDeprecation: c3e3f5b4ea83e7ff3bc86ce09e2a54b7affd687d
   RCTRequired: ee438439880dffc9425930d1dd1a3c883ee6879c
@@ -2480,7 +2576,7 @@ SPEC CHECKSUMS:
   React-Mapbuffer: fae8da2c01aeb7f26ad739731b6dba61fd02fd97
   React-microtasksnativemodule: 20454ffccff553f0ee73fd20873aa8555a5867fb
   react-native-safe-area-context: 5594ec631ede9c311c5c0efa244228eff845ce88
-  react-native-voice: 908a0eba96c8c3d643e4f98b7232c6557d0a6f9c
+  react-native-voice: ed12d69e296a38e3b6ef662cb70126e5768fd134
   React-NativeModulesApple: 65b2735133d6ce8a3cb5f23215ef85e427b0139c
   React-oscompat: f26aa2a4adc84c34212ab12c07988fe19e9cf16a
   React-perflogger: e15a0d43d1928e1c82f4f0b7fc05f7e9bccfede8
@@ -2514,6 +2610,7 @@ SPEC CHECKSUMS:
   ReactCommon: e243aa261effc83c10208f0794bade55ca9ae5b6
   RNCAsyncStorage: a1c8cc8a99c32de1244a9cf707bf9d83d0de0f71
   RNScreens: 482e9707f9826230810c92e765751af53826d509
+  RNSVG: 8a1054afe490b5d63b9792d7ae3c1fde8c05cdd0
   RNVectorIcons: 941a39b5d3b9d8cf8ac2e2fc09b07bfafbcf9796
   SocketRocket: d4aabe649be1e368d1318fdf28a022d714d65748
   Yoga: 29f74a5b77dca8c37669e1e1e867e5f4e12407df

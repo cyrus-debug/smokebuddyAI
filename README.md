@@ -1,21 +1,17 @@
 # Highdeas AI
 
-A unique AI chatbot app that combines a laid-back, philosophical stoner persona with advanced AI capabilities. Built with React Native and powered by OpenAI.
+A React Native mobile app that generates and shares high ideas, powered by AI.
 
 ## Features
 
-- 🤖 AI-powered conversations with a unique stoner personality
-- 💭 Philosophical discussions and creative thinking
-- 🎨 Modern, intuitive user interface
-- 📱 Cross-platform support (iOS & Android)
-
-## Tech Stack
-
-- React Native
-- Expo
-- OpenAI API
-- TypeScript
-- Node.js (Backend)
+- 🤖 AI-powered high idea generation
+- 🎨 Beautiful psychedelic UI with animated background
+- 👁️ Animated psychedelic eye
+- 💭 Modal popup for displaying generated ideas
+- 👍 Voting system for ideas (That's Deep / Too Trippy)
+- 🎯 Go Deeper and Remix functionality
+- 🎵 Text-to-speech support for ideas
+- 📱 Cross-platform (iOS & Android)
 
 ## Getting Started
 
@@ -24,7 +20,7 @@ A unique AI chatbot app that combines a laid-back, philosophical stoner persona 
 - Node.js (v14 or higher)
 - npm or yarn
 - Expo CLI
-- iOS Simulator (for Mac) or Android Studio (for Android development)
+- iOS Simulator (for Mac) or Android Emulator
 
 ### Installation
 
@@ -37,40 +33,70 @@ cd highdeas-ai
 2. Install dependencies:
 ```bash
 npm install
-# or
-yarn install
 ```
 
-3. Set up environment variables:
-Create a `.env` file in the root directory and add your OpenAI API key:
-```
-OPENAI_API_KEY=your_api_key_here
-```
-
-4. Start the development server:
+3. Start the development server:
 ```bash
 npm start
-# or
-yarn start
 ```
 
-5. Run on your preferred platform:
-```bash
-# For iOS
-npm run ios
-# For Android
-npm run android
+4. Run on your preferred platform:
+- Press `i` for iOS simulator
+- Press `a` for Android emulator
+- Scan QR code with Expo Go app for physical device
+
+## Project Structure
+
 ```
+highdeas-ai/
+├── src/
+│   ├── components/
+│   │   └── HighIdeaGenerator.tsx    # Main idea generation component
+│   ├── services/
+│   │   └── elevenlabs.ts            # Text-to-speech service
+│   └── App.tsx                      # Root component
+├── assets/
+│   └── psychedelic-eye.json         # Lottie animation
+└── server/                          # Backend server
+    └── index.js                     # Express server
+```
+
+## Features in Detail
+
+### High Idea Generation
+- Tap the "Generate High Idea" button to create a new idea
+- Ideas are generated using AI and displayed in a modal popup
+- Vote on ideas using "That's Deep" or "Too Trippy" buttons
+- Use "Go Deeper" to explore related ideas
+- Use "Remix" to generate variations of the current idea
+
+### UI/UX
+- Animated psychedelic background using SVG
+- Smooth transitions and animations
+- Modal popup for idea display
+- Intuitive voting system
+- Responsive design for all screen sizes
+
+### Text-to-Speech
+- Listen to generated ideas using ElevenLabs API
+- High-quality, natural-sounding voice synthesis
+- Easy-to-use playback controls
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
 
-- OpenAI for providing the AI capabilities
-- The React Native community for their excellent documentation and tools 
+- [Expo](https://expo.dev/)
+- [React Native](https://reactnative.dev/)
+- [ElevenLabs](https://elevenlabs.io/)
+- [Lottie](https://lottiefiles.com/) 
